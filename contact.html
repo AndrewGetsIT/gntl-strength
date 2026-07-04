@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — GNTL STRENGTH</title>
+  <meta name="description" content="Get in touch with GNTL STRENGTH.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/index.html">GNTL STRENGTH</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/size-guide.html">Size Guide</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-light">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1 class="mb-lg">Get in touch.</h1>
+
+        <div class="stack" style="margin-bottom:48px;">
+          <a class="btn btn-primary" style="width:auto;" id="whatsapp-contact-btn" href="#" target="_blank" rel="noopener">Message us on WhatsApp</a>
+          <p>Or email <a href="mailto:hello@gntlstrength.com" style="text-decoration:underline;">hello@gntlstrength.com</a></p>
+        </div>
+
+        <h2>Send a message</h2>
+        <form name="contact" method="POST" data-netlify="true" class="form-row" netlify-honeypot="bot-field" style="max-width:520px;">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden" style="display:none;">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:0.85rem;font-family:var(--font-head);text-transform:uppercase;letter-spacing:0.03em;">
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:0.85rem;font-family:var(--font-head);text-transform:uppercase;letter-spacing:0.03em;">
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:0.85rem;font-family:var(--font-head);text-transform:uppercase;letter-spacing:0.03em;">
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" style="width:auto;">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-dark">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="logo">GNTL STRENGTH</p>
+          <p class="max-prose" style="margin-top:12px;">Strong in motion.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Navigate</p>
+          <nav class="footer-links">
+            <a href="/shop.html">Shop</a>
+            <a href="/size-guide.html">Size Guide</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> GNTL STRENGTH</span>
+        <span>hello@gntlstrength.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    document.getElementById("whatsapp-contact-btn").href =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I have a question about GNTL STRENGTH.")}`;
+  </script>
+</body>
+</html>
