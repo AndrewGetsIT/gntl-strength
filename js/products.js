@@ -26,8 +26,10 @@ const PRODUCTS = [
     description:
       "Reflective and leather stripe sets for boots, sold in pairs. A small detail that changes how a worn pair reads. Fits most lace-up work and combat boots.",
     images: [
-      "/assets/images/products/boot-stripes/1.jpg",
-      "/assets/images/products/boot-stripes/2.jpg"
+      "/assets/images/products/boot-stripes/real-1.jpg",
+      "/assets/images/products/boot-stripes/real-2.jpg",
+      "/assets/images/products/boot-stripes/real-3.jpg",
+      "/assets/images/products/boot-stripes/real-4.jpg"
     ]
   },
   {
@@ -40,8 +42,12 @@ const PRODUCTS = [
     description:
       "Made to your measurements. Straight leg, mid-rise, built from durable twill. Choose your fabric and we cut to fit. Every pair is made after the order is placed — allow time for production.",
     images: [
-      "/assets/images/products/custom-pant/1.jpg",
-      "/assets/images/products/custom-pant/2.jpg"
+      "/assets/images/products/custom-pant/real-1.jpg",
+      "/assets/images/products/custom-pant/real-2.jpg",
+      "/assets/images/products/custom-pant/real-3.jpg",
+      "/assets/images/products/custom-pant/real-4.jpg",
+      "/assets/images/products/custom-pant/real-5.jpg",
+      "/assets/images/products/custom-pant/real-6.jpg"
     ]
   },
   {
@@ -54,8 +60,100 @@ const PRODUCTS = [
     description:
       "Built to order from full-grain leather. Reinforced toe, stitched sole, made for daily wear and standing work. Tell us your size and we build from there.",
     images: [
-      "/assets/images/products/custom-boot/1.jpg",
-      "/assets/images/products/custom-boot/2.jpg"
+      "/assets/images/products/custom-boot/real-1.jpg",
+      "/assets/images/products/custom-boot/real-2.jpg",
+      "/assets/images/products/custom-boot/real-3.jpg",
+      "/assets/images/products/custom-boot/real-4.jpg",
+      "/assets/images/products/custom-boot/real-5.jpg",
+      "/assets/images/products/custom-boot/real-6.jpg",
+      "/assets/images/products/custom-boot/real-7.jpg"
+    ]
+  },
+  {
+    slug: "custom-cap",
+    name: "Custom Cap",
+    category: "Caps & Hats",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Bedazzled and studded caps and visors, customized with rhinestones, medallions, and charms. Colorway and embellishment are worked out with you. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/custom-caps-hats/real-1.jpg",
+      "/assets/images/products/custom-caps-hats/real-2.jpg"
+    ]
+  },
+  {
+    slug: "fr-studded-hood-jacket",
+    name: "Studded Hood Jacket",
+    category: "Freedom & Rebellion",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Leather jacket with a funnel hood, diagonal zip, and studded spike hardware. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/freedom-and-rebellion/jacket-1.jpg",
+      "/assets/images/products/freedom-and-rebellion/jacket-2.jpg",
+      "/assets/images/products/freedom-and-rebellion/jacket-3.jpg",
+      "/assets/images/products/freedom-and-rebellion/jacket-4.jpg",
+      "/assets/images/products/freedom-and-rebellion/jacket-5.jpg",
+      "/assets/images/products/freedom-and-rebellion/jacket-6.jpg"
+    ]
+  },
+  {
+    slug: "fr-lace-up-pants",
+    name: "Lace-Up Pants",
+    category: "Freedom & Rebellion",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Black pants with side lacing and grommet hardware down the leg. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/freedom-and-rebellion/pants-1.jpg",
+      "/assets/images/products/freedom-and-rebellion/pants-2.jpg",
+      "/assets/images/products/freedom-and-rebellion/pants-3.jpg"
+    ]
+  },
+  {
+    slug: "fr-croc-mini-skirt",
+    name: "Croc Mini Skirt",
+    category: "Freedom & Rebellion",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Croc-embossed leather mini skirt with grommet and lacing detail at the waist. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/freedom-and-rebellion/skirt-1.jpg",
+      "/assets/images/products/freedom-and-rebellion/skirt-2.jpg"
+    ]
+  },
+  {
+    slug: "fr-studded-backpack",
+    name: "Studded Backpack",
+    category: "Freedom & Rebellion",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Leather backpack with spike and stud hardware, drawstring top, and a zip front pocket. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/freedom-and-rebellion/backpack-1.jpg"
+    ]
+  },
+  {
+    slug: "fr-buckle-crop-jacket",
+    name: "Buckle Crop Jacket",
+    category: "Freedom & Rebellion",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Cropped jacket with a stand collar, snap placket, and double buckle straps at the waist. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg"
     ]
   }
 ];
