@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <button type="button" class="btn btn-primary btn-order" data-order-stock>
         Order on WhatsApp
       </button>`
-      : `
+      : product.type === "made_to_order"
+      ? `
       <form class="custom-order-form" data-custom-order-form>
         <p class="pdp-label">Custom order details</p>
         <label>
@@ -86,7 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
           Send order on WhatsApp
         </button>
       </form>
-      <p class="pdp-note">Not sure on measurements? See the <a href="/size-guide.html">size guide</a>.</p>`;
+      <p class="pdp-note">Not sure on measurements? See the <a href="/size-guide.html">size guide</a>.</p>`
+      : `
+      <button type="button" class="btn btn-primary btn-order" data-order-inquiry>
+        I'm Interested
+      </button>`;
 
   root.innerHTML = `
     <div class="pdp-gallery">${gallery}</div>
@@ -97,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="pdp-description">${product.description}</p>
       ${sizesMarkup}
       ${orderMarkup}
-      <a class="pdp-size-link" href="/size-guide.html">Size guide</a>
+      ${product.type !== "inquiry" ? `<a class="pdp-size-link" href="/size-guide.html">Size guide</a>` : ""}
     </div>`;
 
   let selectedSize = product.sizes && product.sizes[0];
@@ -120,6 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
     orderStockBtn.addEventListener("click", () => {
       const sizePart = selectedSize ? `, size ${selectedSize}` : "";
       const message = `Hi, I'd like to order: ${product.name}${sizePart}. Price: ${product.priceLabel}.`;
+      openWhatsApp(message);
+    });
+  }
+
+  const orderInquiryBtn = root.querySelector("[data-order-inquiry]");
+  if (orderInquiryBtn) {
+    orderInquiryBtn.addEventListener("click", () => {
+      const message = `Hi, I'm interested in this item: ${product.name}.`;
       openWhatsApp(message);
     });
   }

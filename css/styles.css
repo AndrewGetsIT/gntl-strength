@@ -149,6 +149,21 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo-mark {
+  height: 56px;
+  width: auto;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .nav-toggle {
