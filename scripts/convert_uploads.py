@@ -52,10 +52,10 @@ JOBS = {
         # Lace-Up Pants
         ("IMG_2628.JPG", "pants-1.jpg"),
         ("IMG_2641.JPG", "pants-2.jpg"),
-        ("IMG_9841.JPG", "pants-3.jpg"),
-        # Croc Mini Skirt
-        ("IMG_2645.JPG", "skirt-1.jpg"),
+        # Croc Mini Skirt (IMG_2645 excluded: branded lifestyle shot with
+        # two models, not a product photo of the skirt itself)
         ("IMG_9847.JPG", "skirt-2.jpg"),
+        ("IMG_9841.JPG", "skirt-3.jpg"),
         # Studded Backpack
         ("IMG_2629.PNG", "backpack-1.jpg"),
         # Buckle Crop Jacket

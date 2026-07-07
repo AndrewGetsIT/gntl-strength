@@ -112,8 +112,7 @@ const PRODUCTS = [
       "Black pants with side lacing and grommet hardware down the leg. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
     images: [
       "/assets/images/products/freedom-and-rebellion/pants-1.jpg",
-      "/assets/images/products/freedom-and-rebellion/pants-2.jpg",
-      "/assets/images/products/freedom-and-rebellion/pants-3.jpg"
+      "/assets/images/products/freedom-and-rebellion/pants-2.jpg"
     ]
   },
   {
@@ -126,7 +125,7 @@ const PRODUCTS = [
     description:
       "Croc-embossed leather mini skirt with grommet and lacing detail at the waist. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
     images: [
-      "/assets/images/products/freedom-and-rebellion/skirt-1.jpg",
+      "/assets/images/products/freedom-and-rebellion/skirt-3.jpg",
       "/assets/images/products/freedom-and-rebellion/skirt-2.jpg"
     ]
   },
