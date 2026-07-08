@@ -19,11 +19,18 @@ const PRODUCTS = [
   },
   {
     slug: "custom-pant",
-    name: "Custom Pant",
+    name: "Custom Pants",
     category: "Pants",
     type: "made_to_order",
     priceLabel: "₦30,000 – ₦45,000",
     sizes: [],
+    sizeGuideLink: true,
+    orderFields: [
+      { name: "waist", label: "Waist (in)", type: "text", required: true },
+      { name: "hip", label: "Hip (in)", type: "text", required: true },
+      { name: "length", label: "Inseam / Length (in)", type: "text", required: true },
+      { name: "fabric", label: "Fabric / material", type: "text", placeholder: "e.g. black twill", required: true }
+    ],
     description:
       "Made to your measurements. Straight leg, mid-rise, built from durable twill. Choose your fabric and we cut to fit. Every pair is made after the order is placed — allow time for production.",
     images: [
@@ -41,13 +48,17 @@ const PRODUCTS = [
   },
   {
     slug: "custom-boot",
-    name: "Custom Boot",
+    name: "Custom Boots",
     category: "Boots",
     type: "made_to_order",
     priceLabel: "₦50,000",
     sizes: [],
+    orderFields: [
+      { name: "shoeSize", label: "Shoe size (UK/EU)", type: "text", placeholder: "e.g. UK 9 / EU 43", required: true },
+      { name: "designRequest", label: "Custom design request", type: "textarea", placeholder: "Describe the design, colors, patches, or theme you want", required: true }
+    ],
     description:
-      "Built to order from full-grain leather. Reinforced toe, stitched sole, made for daily wear and standing work. Tell us your size and we build from there.",
+      "Sneakers customized to order — studs, patches, hand-painted designs, and rework on your own pair or ours. Tell us your size and what you want built.",
     images: [
       "/assets/images/products/custom-boot/real-1.jpg",
       "/assets/images/products/custom-boot/real-2.jpg",
@@ -62,9 +73,13 @@ const PRODUCTS = [
     slug: "custom-cap",
     name: "Custom Cap",
     category: "Caps & Hats",
-    type: "inquiry",
+    type: "made_to_order",
     priceLabel: "Price on request",
     sizes: [],
+    orderFields: [
+      { name: "headCircumference", label: "Head circumference (in)", type: "text", placeholder: "e.g. 22.5", required: false },
+      { name: "notes", label: "Customization notes", type: "textarea", placeholder: "Rhinestones, medallions, charms, colorway, etc.", required: true }
+    ],
     description:
       "Bedazzled and studded caps and visors, customized with rhinestones, medallions, and charms. Colorway and embellishment are worked out with you. Pricing and availability to be confirmed.",
     images: [

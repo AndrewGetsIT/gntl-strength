@@ -45,6 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>`
       : "";
 
+  const orderFields = product.orderFields || [];
+
+  function fieldMarkup(field) {
+    const placeholder = field.placeholder ? ` placeholder="${field.placeholder}"` : "";
+    const required = field.required ? " required" : "";
+    const input =
+      field.type === "textarea"
+        ? `<textarea name="${field.name}" rows="4"${placeholder}${required}></textarea>`
+        : `<input type="text" name="${field.name}"${placeholder}${required}>`;
+    return `<label>${field.label}${input}</label>`;
+  }
+
   const orderMarkup =
     product.type === "stock"
       ? `
@@ -63,33 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
           Phone
           <input type="tel" name="phone" required>
         </label>
-        <div class="measurement-grid">
-          <label>
-            Chest (in)
-            <input type="text" name="chest" required>
-          </label>
-          <label>
-            Waist (in)
-            <input type="text" name="waist" required>
-          </label>
-          <label>
-            Hip (in)
-            <input type="text" name="hip" required>
-          </label>
-          <label>
-            Length (in)
-            <input type="text" name="length" required>
-          </label>
-        </div>
-        <label>
-          Fabric / material
-          <input type="text" name="fabric" placeholder="e.g. black twill" required>
-        </label>
+        ${orderFields.map(fieldMarkup).join("")}
         <button type="submit" class="btn btn-primary btn-order">
           Send order on WhatsApp
         </button>
       </form>
-      <p class="pdp-note">Not sure on measurements? See the <a href="/size-guide.html">size guide</a>.</p>`
+      ${product.sizeGuideLink ? `<p class="pdp-note">Not sure on measurements? See the <a href="/size-guide.html">size guide</a>.</p>` : ""}`
       : `
       <button type="button" class="btn btn-primary btn-order" data-order-inquiry>
         I'm Interested
@@ -104,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="pdp-description">${product.description}</p>
       ${sizesMarkup}
       ${orderMarkup}
-      ${product.type === "stock" || product.type === "made_to_order" ? `<a class="pdp-size-link" href="/size-guide.html">Size guide</a>` : ""}
+      ${product.sizeGuideLink || (product.type === "stock" && product.sizes.length) ? `<a class="pdp-size-link" href="/size-guide.html">Size guide</a>` : ""}
     </div>`;
 
   let selectedSize = product.sizes && product.sizes[0];
@@ -144,11 +135,12 @@ document.addEventListener("DOMContentLoaded", () => {
     customForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const data = new FormData(customForm);
+      const details = orderFields
+        .map((f) => `${f.label}: ${data.get(f.name)}`)
+        .join(", ");
       const message =
         `Hi, I'd like to order a ${product.name}. ` +
-        `Measurements — Chest: ${data.get("chest")}, Waist: ${data.get("waist")}, ` +
-        `Hip: ${data.get("hip")}, Length: ${data.get("length")}. ` +
-        `Fabric: ${data.get("fabric")}. ` +
+        `${details}. ` +
         `Name: ${data.get("name")}, Phone: ${data.get("phone")}.`;
       openWhatsApp(message);
     });
