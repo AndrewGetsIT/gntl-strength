@@ -112,7 +112,7 @@ const PRODUCTS = [
       "Studded leather backpack with a flap closure, drawstring top, and a zip front pocket. Pricing and availability to be confirmed.",
     images: [
       "/assets/images/products/leather-backpack/real-2.jpg",
-      "/assets/images/products/leather-backpack/real-1.jpg"
+      "/assets/images/products/leather-backpack/real-1.png"
     ]
   },
   {
