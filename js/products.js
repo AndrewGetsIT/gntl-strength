@@ -95,19 +95,14 @@ const PRODUCTS = [
     priceLabel: "Browse the collection",
     sizes: [],
     description:
-      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, a mini skirt, and a backpack.",
+      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, and a backpack.",
     images: [
       "/assets/images/products/freedom-and-rebellion/cover.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-1.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-2.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-3.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-4.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-5.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-6.jpg",
       "/assets/images/products/freedom-and-rebellion/pants-1.jpg",
       "/assets/images/products/freedom-and-rebellion/pants-2.jpg",
-      "/assets/images/products/freedom-and-rebellion/skirt-2.jpg",
-      "/assets/images/products/freedom-and-rebellion/skirt-3.jpg",
       "/assets/images/products/freedom-and-rebellion/backpack-1.jpg",
       "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg"
     ]
