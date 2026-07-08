@@ -297,6 +297,27 @@ p {
   padding-bottom: 56px;
 }
 
+.hero-logo-extended {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: clamp(140px, 22vw, 340px);
+  height: auto;
+  z-index: 1;
+  mix-blend-mode: screen;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .hero-logo-extended {
+    top: 34%;
+    right: 4%;
+    width: clamp(110px, 38vw, 200px);
+  }
+}
+
 .hero h1 {
   font-size: clamp(2.6rem, 9vw, 5rem);
   text-transform: uppercase;

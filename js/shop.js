@@ -75,7 +75,6 @@ function renderCollectionShowcase(root, product) {
         <h3>${product.name}</h3>
         <p class="collection-showcase-desc">${product.description}</p>
         <p class="collection-showcase-counter" data-carousel-counter>1 / ${product.images.length}</p>
-        <button type="button" class="btn btn-primary" style="width:auto;" data-order-collection-shop>I'm Interested</button>
       </div>
     </div>`;
 
@@ -91,10 +90,4 @@ function renderCollectionShowcase(root, product) {
 
   root.querySelector("[data-carousel-prev]").addEventListener("click", () => show(index - 1));
   root.querySelector("[data-carousel-next]").addEventListener("click", () => show(index + 1));
-
-  root.querySelector("[data-order-collection-shop]").addEventListener("click", () => {
-    const message = `Hi, I'm interested in the ${product.name}. Can you share more details?`;
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank", "noopener");
-  });
 }
