@@ -3,13 +3,13 @@
 const PRODUCTS = [
   {
     slug: "boot-stripes",
-    name: "Boot Stripes",
-    category: "Boot Stripes",
+    name: "Boot Straps",
+    category: "Boot Straps",
     type: "stock",
     priceLabel: "₦12,000 – ₦18,000",
     sizes: [],
     description:
-      "Reflective and leather stripe sets for boots, sold in pairs. A small detail that changes how a worn pair reads. Fits most lace-up work and combat boots.",
+      "Reflective and leather strap sets for boots, sold in pairs. A small detail that changes how a worn pair reads. Fits most lace-up work and combat boots.",
     images: [
       "/assets/images/products/boot-stripes/real-1.jpg",
       "/assets/images/products/boot-stripes/real-2.jpg",
@@ -70,6 +70,20 @@ const PRODUCTS = [
     images: [
       "/assets/images/products/custom-caps-hats/real-1.jpg",
       "/assets/images/products/custom-caps-hats/real-2.jpg"
+    ]
+  },
+  {
+    slug: "leather-shorts",
+    name: "Leather Shorts",
+    category: "Shorts",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Black faux leather shorts with lace-up grommet detail and tab closures at the waist. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/leather-shorts/real-1.jpg",
+      "/assets/images/products/leather-shorts/real-2.jpg"
     ]
   },
   {
