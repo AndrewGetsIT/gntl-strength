@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("slug");
-  const product = PRODUCTS.find((p) => p.slug === slug);
+  // Collections are shop-page-only (inline showcase), not standalone
+  // product pages.
+  const product = PRODUCTS.find((p) => p.slug === slug && p.type !== "collection");
 
   if (!product) {
     root.innerHTML = `
@@ -88,11 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </button>
       </form>
       <p class="pdp-note">Not sure on measurements? See the <a href="/size-guide.html">size guide</a>.</p>`
-      : product.type === "collection"
-      ? `
-      <button type="button" class="btn btn-primary btn-order" data-order-collection>
-        I'm Interested
-      </button>`
       : `
       <button type="button" class="btn btn-primary btn-order" data-order-inquiry>
         I'm Interested
@@ -138,14 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (orderInquiryBtn) {
     orderInquiryBtn.addEventListener("click", () => {
       const message = `Hi, I'm interested in this item: ${product.name}.`;
-      openWhatsApp(message);
-    });
-  }
-
-  const orderCollectionBtn = root.querySelector("[data-order-collection]");
-  if (orderCollectionBtn) {
-    orderCollectionBtn.addEventListener("click", () => {
-      const message = `Hi, I'm interested in the ${product.name}. Can you share more details?`;
       openWhatsApp(message);
     });
   }

@@ -32,7 +32,20 @@ const PRODUCTS = [
       "/assets/images/products/custom-pant/real-3.jpg",
       "/assets/images/products/custom-pant/real-4.jpg",
       "/assets/images/products/custom-pant/real-5.jpg",
-      "/assets/images/products/custom-pant/real-6.jpg"
+      "/assets/images/products/custom-pant/real-6.jpg",
+      "/assets/images/products/custom-pant/real-7.jpg",
+      "/assets/images/products/custom-pant/real-8.jpg",
+      "/assets/images/products/custom-pant/real-9.jpg",
+      "/assets/images/products/custom-pant/real-10.jpg",
+      "/assets/images/products/custom-pant/real-11.jpg",
+      "/assets/images/products/custom-pant/real-12.jpg",
+      "/assets/images/products/custom-pant/real-13.jpg",
+      "/assets/images/products/custom-pant/real-14.jpg",
+      "/assets/images/products/custom-pant/real-15.jpg",
+      "/assets/images/products/custom-pant/real-16.jpg",
+      "/assets/images/products/custom-pant/real-17.jpg",
+      "/assets/images/products/custom-pant/real-18.jpg",
+      "/assets/images/products/custom-pant/real-19.jpg"
     ]
   },
   {
@@ -77,7 +90,7 @@ const PRODUCTS = [
     priceLabel: "Browse the collection",
     sizes: [],
     description:
-      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, a mini skirt, and a backpack. Pricing and availability to be confirmed piece by piece.",
+      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, a mini skirt, and a backpack.",
     images: [
       "/assets/images/products/freedom-and-rebellion/cover.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-1.jpg",
