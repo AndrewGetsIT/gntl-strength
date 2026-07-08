@@ -528,7 +528,7 @@ p {
   width: 100%;
   height: auto;
   display: block;
-  background: var(--border-light);
+  background: var(--bg-light);
 }
 
 .pdp-category {
