@@ -96,8 +96,8 @@ const PRODUCTS = [
     description:
       "Studded leather backpack with a flap closure, drawstring top, and a zip front pocket. Pricing and availability to be confirmed.",
     images: [
-      "/assets/images/products/leather-backpack/real-1.jpg",
-      "/assets/images/products/leather-backpack/real-2.jpg"
+      "/assets/images/products/leather-backpack/real-2.jpg",
+      "/assets/images/products/leather-backpack/real-1.jpg"
     ]
   },
   {
@@ -116,6 +116,20 @@ const PRODUCTS = [
     ]
   },
   {
+    slug: "leather-jacket",
+    name: "Custom Leather Jacket",
+    category: "Jackets",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Black leather jacket with hardware detail, built to order. Style and finish vary piece to piece. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/leather-jacket/real-1.jpg",
+      "/assets/images/products/leather-jacket/real-2.jpg"
+    ]
+  },
+  {
     slug: "freedom-and-rebellion",
     name: "Freedom & Rebellion Collection",
     category: "Freedom & Rebellion",
@@ -124,7 +138,7 @@ const PRODUCTS = [
     priceLabel: "Browse the collection",
     sizes: [],
     description:
-      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, and a backpack.",
+      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets and pants.",
     images: [
       "/assets/images/products/freedom-and-rebellion/cover.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-1.jpg",
@@ -132,7 +146,6 @@ const PRODUCTS = [
       "/assets/images/products/freedom-and-rebellion/jacket-4.jpg",
       "/assets/images/products/freedom-and-rebellion/pants-1.jpg",
       "/assets/images/products/freedom-and-rebellion/pants-2.jpg",
-      "/assets/images/products/freedom-and-rebellion/backpack-1.jpg",
       "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg"
     ]
   }
