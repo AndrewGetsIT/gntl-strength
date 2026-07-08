@@ -1,10 +1,13 @@
 // Shop grid: renders PRODUCTS and filters by category client-side.
+// Featured collections (type: "collection") are excluded from the
+// filterable grid and rendered separately as an inline slideshow.
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector("[data-product-grid]");
   const filterBar = document.querySelector("[data-filter-bar]");
   if (!grid) return;
 
-  const categories = ["All", ...new Set(PRODUCTS.map((p) => p.category))];
+  const gridProducts = PRODUCTS.filter((p) => p.type !== "collection");
+  const categories = ["All", ...new Set(gridProducts.map((p) => p.category))];
 
   filterBar.innerHTML = categories
     .map(
@@ -16,29 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function render(category) {
     const items =
       category === "All"
-        ? PRODUCTS
-        : PRODUCTS.filter((p) => p.category === category);
+        ? gridProducts
+        : gridProducts.filter((p) => p.category === category);
 
-    const ordered = [...items].sort(
-      (a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)
-    );
-
-    grid.innerHTML = ordered
-      .map((p) =>
-        p.featured
-          ? `
-      <a class="product-card-featured" href="/product.html?slug=${p.slug}">
-        <div class="product-card-featured-image">
-          <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
-        </div>
-        <div class="product-card-featured-info">
-          <p class="eyebrow">Featured Collection</p>
-          <h3>${p.name}</h3>
-          <p class="product-card-featured-desc">${p.description}</p>
-          <span class="product-card-featured-cta">${p.priceLabel} &rarr;</span>
-        </div>
-      </a>`
-          : `
+    grid.innerHTML = items
+      .map(
+        (p) => `
       <a class="product-card" href="/product.html?slug=${p.slug}">
         <div class="product-card-image">
           <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
@@ -63,4 +49,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   render("All");
+
+  // Featured collection slideshow
+  const showcase = document.querySelector("[data-collection-showcase]");
+  const collection = PRODUCTS.find((p) => p.type === "collection");
+  if (showcase && collection) {
+    renderCollectionShowcase(showcase, collection);
+  }
 });
+
+function renderCollectionShowcase(root, product) {
+  let index = 0;
+
+  root.innerHTML = `
+    <div class="collection-showcase">
+      <div class="collection-showcase-slide">
+        <button type="button" class="collection-nav collection-nav-prev" data-carousel-prev aria-label="Previous image">&larr;</button>
+        <div class="collection-showcase-image">
+          <img data-carousel-image src="${product.images[0]}" alt="${product.name} view 1">
+        </div>
+        <button type="button" class="collection-nav collection-nav-next" data-carousel-next aria-label="Next image">&rarr;</button>
+      </div>
+      <div class="collection-showcase-info">
+        <p class="eyebrow">Featured Collection</p>
+        <h3>${product.name}</h3>
+        <p class="collection-showcase-desc">${product.description}</p>
+        <p class="collection-showcase-counter" data-carousel-counter>1 / ${product.images.length}</p>
+        <button type="button" class="btn btn-primary" style="width:auto;" data-order-collection-shop>I'm Interested</button>
+      </div>
+    </div>`;
+
+  const img = root.querySelector("[data-carousel-image]");
+  const counter = root.querySelector("[data-carousel-counter]");
+
+  function show(i) {
+    index = (i + product.images.length) % product.images.length;
+    img.src = product.images[index];
+    img.alt = `${product.name} view ${index + 1}`;
+    counter.textContent = `${index + 1} / ${product.images.length}`;
+  }
+
+  root.querySelector("[data-carousel-prev]").addEventListener("click", () => show(index - 1));
+  root.querySelector("[data-carousel-next]").addEventListener("click", () => show(index + 1));
+
+  root.querySelector("[data-order-collection-shop]").addEventListener("click", () => {
+    const message = `Hi, I'm interested in the ${product.name}. Can you share more details?`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener");
+  });
+}
