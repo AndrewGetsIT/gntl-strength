@@ -87,6 +87,35 @@ const PRODUCTS = [
     ]
   },
   {
+    slug: "leather-backpack",
+    name: "Leather Backpack",
+    category: "Bags",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Studded leather backpack with a flap closure, drawstring top, and a zip front pocket. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/leather-backpack/real-1.jpg",
+      "/assets/images/products/leather-backpack/real-2.jpg"
+    ]
+  },
+  {
+    slug: "custom-leather-mini-skirt",
+    name: "Custom Leather Mini Skirt",
+    category: "Skirts",
+    type: "inquiry",
+    priceLabel: "Price on request",
+    sizes: [],
+    description:
+      "Croc-embossed leather mini skirt with grommet and lacing detail at the waist. Pricing and availability to be confirmed.",
+    images: [
+      "/assets/images/products/custom-leather-mini-skirt/real-1.jpg",
+      "/assets/images/products/custom-leather-mini-skirt/real-2.jpg",
+      "/assets/images/products/custom-leather-mini-skirt/real-3.jpg"
+    ]
+  },
+  {
     slug: "freedom-and-rebellion",
     name: "Freedom & Rebellion Collection",
     category: "Freedom & Rebellion",
