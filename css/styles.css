@@ -310,8 +310,6 @@ p {
   width: clamp(140px, 22vw, 340px);
   height: auto;
   z-index: 1;
-  mix-blend-mode: screen;
-  opacity: 0.92;
   pointer-events: none;
 }
 
