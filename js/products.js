@@ -2,21 +2,6 @@
 // add, remove, or update products.
 const PRODUCTS = [
   {
-    slug: "jacket",
-    name: "Jacket",
-    category: "Jackets",
-    type: "stock",
-    priceLabel: "₦30,000",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "A structured outer layer built for movement. Heavyweight cotton, reinforced seams, cut close without restricting the shoulders. Made to hold its shape through repeated wear.",
-    images: [
-      "/assets/images/products/jacket/1.jpg",
-      "/assets/images/products/jacket/2.jpg",
-      "/assets/images/products/jacket/3.jpg"
-    ]
-  },
-  {
     slug: "boot-stripes",
     name: "Boot Stripes",
     category: "Boot Stripes",
@@ -84,74 +69,28 @@ const PRODUCTS = [
     ]
   },
   {
-    slug: "fr-studded-hood-jacket",
-    name: "Studded Hood Jacket",
+    slug: "freedom-and-rebellion",
+    name: "Freedom & Rebellion Collection",
     category: "Freedom & Rebellion",
-    type: "inquiry",
-    priceLabel: "Price on request",
+    type: "collection",
+    featured: true,
+    priceLabel: "Browse the collection",
     sizes: [],
     description:
-      "Leather jacket with a funnel hood, diagonal zip, and studded spike hardware. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
+      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, a mini skirt, and a backpack. Pricing and availability to be confirmed piece by piece.",
     images: [
+      "/assets/images/products/freedom-and-rebellion/cover.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-1.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-2.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-3.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-4.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-5.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-6.jpg"
-    ]
-  },
-  {
-    slug: "fr-lace-up-pants",
-    name: "Lace-Up Pants",
-    category: "Freedom & Rebellion",
-    type: "inquiry",
-    priceLabel: "Price on request",
-    sizes: [],
-    description:
-      "Black pants with side lacing and grommet hardware down the leg. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
-    images: [
+      "/assets/images/products/freedom-and-rebellion/jacket-6.jpg",
       "/assets/images/products/freedom-and-rebellion/pants-1.jpg",
-      "/assets/images/products/freedom-and-rebellion/pants-2.jpg"
-    ]
-  },
-  {
-    slug: "fr-croc-mini-skirt",
-    name: "Croc Mini Skirt",
-    category: "Freedom & Rebellion",
-    type: "inquiry",
-    priceLabel: "Price on request",
-    sizes: [],
-    description:
-      "Croc-embossed leather mini skirt with grommet and lacing detail at the waist. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
-    images: [
+      "/assets/images/products/freedom-and-rebellion/pants-2.jpg",
+      "/assets/images/products/freedom-and-rebellion/skirt-2.jpg",
       "/assets/images/products/freedom-and-rebellion/skirt-3.jpg",
-      "/assets/images/products/freedom-and-rebellion/skirt-2.jpg"
-    ]
-  },
-  {
-    slug: "fr-studded-backpack",
-    name: "Studded Backpack",
-    category: "Freedom & Rebellion",
-    type: "inquiry",
-    priceLabel: "Price on request",
-    sizes: [],
-    description:
-      "Leather backpack with spike and stud hardware, drawstring top, and a zip front pocket. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
-    images: [
-      "/assets/images/products/freedom-and-rebellion/backpack-1.jpg"
-    ]
-  },
-  {
-    slug: "fr-buckle-crop-jacket",
-    name: "Buckle Crop Jacket",
-    category: "Freedom & Rebellion",
-    type: "inquiry",
-    priceLabel: "Price on request",
-    sizes: [],
-    description:
-      "Cropped jacket with a stand collar, snap placket, and double buckle straps at the waist. Part of the Freedom & Rebellion collection. Pricing and availability to be confirmed.",
-    images: [
+      "/assets/images/products/freedom-and-rebellion/backpack-1.jpg",
       "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg"
     ]
   }

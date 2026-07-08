@@ -19,9 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
         ? PRODUCTS
         : PRODUCTS.filter((p) => p.category === category);
 
-    grid.innerHTML = items
-      .map(
-        (p) => `
+    const ordered = [...items].sort(
+      (a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)
+    );
+
+    grid.innerHTML = ordered
+      .map((p) =>
+        p.featured
+          ? `
+      <a class="product-card-featured" href="/product.html?slug=${p.slug}">
+        <div class="product-card-featured-image">
+          <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
+        </div>
+        <div class="product-card-featured-info">
+          <p class="eyebrow">Featured Collection</p>
+          <h3>${p.name}</h3>
+          <p class="product-card-featured-desc">${p.description}</p>
+          <span class="product-card-featured-cta">${p.priceLabel} &rarr;</span>
+        </div>
+      </a>`
+          : `
       <a class="product-card" href="/product.html?slug=${p.slug}">
         <div class="product-card-image">
           <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
