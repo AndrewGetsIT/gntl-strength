@@ -50,20 +50,17 @@ JOBS = {
         ("15BB724E-1666-49A1-BFC1-938A0FDD1A32.JPG", "real-2.jpg"),
     ],
     "freedom-and-rebellion": [
-        # Studded Hood Jacket
+        # Studded Hood Jacket. jacket-3/5/6 (IMG_2636, IMG_9846, IMG_2646)
+        # dropped from the showcase gallery — tall portrait crops that
+        # pillarbox badly in the landscape-shaped carousel box.
         ("IMG_2630.JPG", "jacket-1.jpg"),
         ("IMG_2631.JPG", "jacket-2.jpg"),
-        ("IMG_2636.JPG", "jacket-3.jpg"),
         ("IMG_2647.JPG", "jacket-4.jpg"),
-        ("IMG_9846.JPG", "jacket-5.jpg"),
-        ("IMG_2646.JPG", "jacket-6.jpg"),
         # Lace-Up Pants
         ("IMG_2628.JPG", "pants-1.jpg"),
         ("IMG_2641.JPG", "pants-2.jpg"),
-        # Croc Mini Skirt (IMG_2645 excluded: branded lifestyle shot with
-        # two models, not a product photo of the skirt itself)
-        ("IMG_9847.JPG", "skirt-2.jpg"),
-        ("IMG_9841.JPG", "skirt-3.jpg"),
+        # Croc Mini Skirt dropped entirely (IMG_2645 was never a product
+        # photo; IMG_9847/IMG_9841 pillarbox the same way as above)
         # Studded Backpack
         ("IMG_2629.PNG", "backpack-1.jpg"),
         # Buckle Crop Jacket
