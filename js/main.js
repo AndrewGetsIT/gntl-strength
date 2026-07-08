@@ -29,4 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("is-active");
     }
   });
+
+  document.querySelectorAll("[data-footer-whatsapp]").forEach((link) => {
+    const message = "Hi, I have a question about GNTL STRENGTH.";
+    link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  });
 });
