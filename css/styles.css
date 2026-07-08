@@ -155,12 +155,17 @@ p {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  gap: 10px;
 }
 
 .logo-img {
   height: 36px;
   width: auto;
   display: block;
+}
+
+.logo-text {
+  line-height: 1;
 }
 
 .footer-logo-mark {
