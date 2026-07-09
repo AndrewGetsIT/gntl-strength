@@ -92,7 +92,7 @@ const PRODUCTS = [
     name: "Leather Shorts",
     category: "Shorts",
     type: "inquiry",
-    priceLabel: "Price on request",
+    priceLabel: "₦15,000",
     sizes: [],
     description:
       "Black faux leather shorts with lace-up grommet detail and tab closures at the waist. Pricing and availability to be confirmed.",
@@ -120,7 +120,7 @@ const PRODUCTS = [
     name: "Custom Leather Mini Skirt",
     category: "Skirts",
     type: "inquiry",
-    priceLabel: "Price on request",
+    priceLabel: "₦15,000",
     sizes: [],
     description:
       "Croc-embossed leather mini skirt with grommet and lacing detail at the waist. Pricing and availability to be confirmed.",
