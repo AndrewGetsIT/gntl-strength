@@ -496,8 +496,7 @@ p {
 
 .collection-lead-gallery img {
   flex: 0 0 auto;
-  width: 78vw;
-  max-width: 380px;
+  width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius);
@@ -536,8 +535,7 @@ p {
 
 .collection-item-gallery img {
   flex: 0 0 auto;
-  width: 82%;
-  max-width: 380px;
+  width: 100%;
   scroll-snap-align: start;
   border-radius: var(--radius);
   background: var(--bg-dark);
