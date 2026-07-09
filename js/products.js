@@ -127,7 +127,8 @@ const PRODUCTS = [
       "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, and the mini skirt.",
     images: [
       "/assets/images/products/freedom-and-rebellion/cover.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-2.jpg"
+      "/assets/images/products/freedom-and-rebellion/jacket-2.jpg",
+      "/assets/images/products/freedom-and-rebellion/jacket-4.jpg"
     ],
     items: [
       {
