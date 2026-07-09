@@ -116,35 +116,6 @@ const PRODUCTS = [
     ]
   },
   {
-    slug: "custom-leather-mini-skirt",
-    name: "Custom Leather Mini Skirt",
-    category: "Skirts",
-    type: "inquiry",
-    priceLabel: "₦15,000",
-    sizes: [],
-    description:
-      "Croc-embossed leather mini skirt with grommet and lacing detail at the waist. Pricing and availability to be confirmed.",
-    images: [
-      "/assets/images/products/custom-leather-mini-skirt/real-1.jpg",
-      "/assets/images/products/custom-leather-mini-skirt/real-2.jpg",
-      "/assets/images/products/custom-leather-mini-skirt/real-3.jpg"
-    ]
-  },
-  {
-    slug: "leather-jacket",
-    name: "Custom Leather Jacket",
-    category: "Jackets",
-    type: "inquiry",
-    priceLabel: "Price on request",
-    sizes: [],
-    description:
-      "Black leather jacket with hardware detail, built to order. Style and finish vary piece to piece. Pricing and availability to be confirmed.",
-    images: [
-      "/assets/images/products/leather-jacket/real-1.jpg",
-      "/assets/images/products/leather-jacket/real-2.jpg"
-    ]
-  },
-  {
     slug: "freedom-and-rebellion",
     name: "Freedom & Rebellion Collection",
     category: "Freedom & Rebellion",
@@ -153,15 +124,47 @@ const PRODUCTS = [
     priceLabel: "Browse the collection",
     sizes: [],
     description:
-      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets and pants.",
+      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, and the mini skirt.",
     images: [
       "/assets/images/products/freedom-and-rebellion/cover.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-1.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-2.jpg",
-      "/assets/images/products/freedom-and-rebellion/jacket-4.jpg",
-      "/assets/images/products/freedom-and-rebellion/pants-1.jpg",
-      "/assets/images/products/freedom-and-rebellion/pants-2.jpg",
-      "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg"
+      "/assets/images/products/freedom-and-rebellion/jacket-2.jpg"
+    ],
+    items: [
+      {
+        name: "Buckle Strap Leather Jacket",
+        priceLabel: "Price on request",
+        description:
+          "Studded leather jacket with a snap-button closure and buckle straps. Style and finish vary piece to piece.",
+        images: [
+          "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg",
+          "/assets/images/products/freedom-and-rebellion/jacket-4.jpg"
+        ]
+      },
+      {
+        name: "Lace-Up Leather Panel Pants",
+        priceLabel: "Price on request",
+        description:
+          "Black pants with leather side panels and lace-up grommet detail.",
+        images: ["/assets/images/products/freedom-and-rebellion/pants-1.jpg"]
+      },
+      {
+        name: "Buckled Cargo Pants",
+        priceLabel: "Price on request",
+        description:
+          "Cargo-style pants with a buckled leg strap and chain accent.",
+        images: ["/assets/images/products/freedom-and-rebellion/pants-2.jpg"]
+      },
+      {
+        name: "Custom Leather Mini Skirt",
+        priceLabel: "₦15,000",
+        description:
+          "Croc-embossed leather mini skirt with grommet and lacing detail at the waist.",
+        images: [
+          "/assets/images/products/custom-leather-mini-skirt/real-1.jpg",
+          "/assets/images/products/custom-leather-mini-skirt/real-2.jpg",
+          "/assets/images/products/custom-leather-mini-skirt/real-3.jpg"
+        ]
+      }
     ]
   }
 ];

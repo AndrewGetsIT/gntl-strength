@@ -28,6 +28,7 @@ function renderCollectionShowcase(root, product) {
         <h3>${product.name}</h3>
         <p class="collection-showcase-desc">${product.description}</p>
         <p class="collection-showcase-counter" data-carousel-counter>1 / ${product.images.length}</p>
+        <a class="btn btn-outline" href="/collection.html?slug=${product.slug}">View the collection</a>
       </div>
     </div>`;
 
