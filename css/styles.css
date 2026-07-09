@@ -484,6 +484,102 @@ p {
   margin-bottom: 1.5em;
 }
 
+/* Collection detail page (e.g. Freedom & Rebellion) */
+.collection-lead-gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  scroll-snap-type: x mandatory;
+}
+
+.collection-lead-gallery img {
+  flex: 0 0 auto;
+  width: 78vw;
+  max-width: 380px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  scroll-snap-align: start;
+  background: var(--bg-dark);
+}
+
+@media (min-width: 700px) {
+  .collection-lead-gallery img {
+    width: 320px;
+  }
+}
+
+.collection-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  padding: 40px 0;
+  border-top: 1px solid var(--border-dark);
+}
+
+@media (min-width: 800px) {
+  .collection-item {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+  }
+}
+
+.collection-item-gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.collection-item-gallery img {
+  flex: 0 0 auto;
+  width: 82%;
+  max-width: 380px;
+  scroll-snap-align: start;
+  border-radius: var(--radius);
+  background: var(--bg-dark);
+}
+
+@media (min-width: 800px) {
+  .collection-item-gallery img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.collection-item-info h3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 0.4em;
+}
+
+.collection-item-desc {
+  max-width: 48ch;
+  opacity: 0.85;
+}
+
+.collection-item-footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.collection-item-footer .btn {
+  width: auto;
+}
+
+.collection-item-price {
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+}
+
 /* Featured section on home */
 .featured-grid {
   display: grid;
