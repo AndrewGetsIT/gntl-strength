@@ -519,6 +519,8 @@ p {
 .collection-item-gallery img {
   flex: 0 0 auto;
   width: 100%;
+  height: min(65vh, 560px);
+  object-fit: contain;
   scroll-snap-align: start;
   border-radius: var(--radius);
   background: var(--bg-dark);
