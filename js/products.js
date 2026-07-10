@@ -94,13 +94,15 @@ const PRODUCTS = [
       "Black faux leather shorts with lace-up grommet detail and tab closures at the waist. Pricing and availability to be confirmed.",
     images: [
       "/assets/images/products/leather-shorts/real-1.jpg",
-      "/assets/images/products/leather-shorts/real-2.jpg"
+      "/assets/images/products/leather-shorts/real-2.jpg",
+      "/assets/images/products/leather-shorts/real-3.jpg",
+      "/assets/images/products/leather-shorts/real-4.jpg"
     ]
   },
   {
     slug: "freedom-and-rebellion",
-    name: "Freedom & Rebellion Collection",
-    category: "Freedom & Rebellion",
+    name: "Rebellion & Freedom Collection",
+    category: "Rebellion & Freedom",
     type: "collection",
     featured: true,
     priceLabel: "Browse the collection",
