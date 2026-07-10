@@ -497,8 +497,7 @@ p {
 .collection-lead-gallery img {
   flex: 0 0 auto;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
   border-radius: var(--radius);
   scroll-snap-align: start;
   background: var(--bg-dark);
