@@ -12,7 +12,7 @@ from PIL import Image, ImageFilter
 from scipy import ndimage
 
 
-def remove_white_background(src_path, dst_path, threshold=235):
+def remove_white_background(src_path, dst_path, threshold=235, min_hole_size=500):
     img = Image.open(src_path).convert("RGB")
     arr = np.array(img)
 
@@ -23,18 +23,36 @@ def remove_white_background(src_path, dst_path, threshold=235):
     is_low_sat = (mx - mn) < 20
     candidate = is_bright & is_low_sat
 
-    # Only keep candidate regions connected to the border (true background),
-    # not isolated near-white pixels inside the subject.
+    # Remove candidate regions connected to the border (true background),
+    # plus any enclosed candidate region large enough to be a real hole
+    # in the subject (e.g. the negative space inside a strap loop) —
+    # but not small isolated near-white pixels inside the subject
+    # (e.g. a metallic badge's specular highlight), which stay intact.
     labeled, n = ndimage.label(candidate)
     border_labels = set(labeled[0, :]) | set(labeled[-1, :]) | set(labeled[:, 0]) | set(labeled[:, -1])
     border_labels.discard(0)
 
-    bg_mask = np.isin(labeled, list(border_labels))
+    sizes = ndimage.sum(candidate, labeled, range(1, n + 1))
+    hole_labels = {i + 1 for i, s in enumerate(sizes) if s >= min_hole_size}
+
+    bg_mask = np.isin(labeled, list(border_labels | hole_labels))
 
     alpha = np.where(bg_mask, 0, 255).astype(np.uint8)
     alpha_img = Image.fromarray(alpha, mode="L").filter(ImageFilter.GaussianBlur(1.2))
+    alpha_arr = np.array(alpha_img)
 
-    rgba = img.convert("RGBA")
+    # Darken every pixel that isn't fully opaque (the removed background
+    # AND the soft blurred edge ring around it), not just the fully-
+    # transparent ones. Browsers/PIL resize each RGBA channel
+    # independently, so a light studio-white edge pixel sitting next to
+    # a black-leather pixel interpolates to light gray at reduced sizes
+    # — a visible white halo, invisible on a light page but glaring on
+    # a dark one. Keeping both endpoints of that interpolation dark
+    # (black matches this subject) avoids the halo on any background.
+    arr_out = arr.copy()
+    arr_out[alpha_arr < 255] = 0
+
+    rgba = Image.fromarray(arr_out, mode="RGB").convert("RGBA")
     rgba.putalpha(alpha_img)
     rgba.save(dst_path, "PNG", optimize=True)
     print(f"{src_path} -> {dst_path} ({rgba.size[0]}x{rgba.size[1]})")
