@@ -6,7 +6,7 @@ const PRODUCTS = [
     name: "Boot Straps",
     category: "Boot Straps",
     type: "stock",
-    priceLabel: "₦12,000 – ₦18,000",
+    priceLabel: "₦30,000",
     sizes: [],
     description:
       "Reflective and leather strap sets for boots, sold in pairs. A small detail that changes how a worn pair reads. Fits most lace-up work and combat boots.",
@@ -85,7 +85,7 @@ const PRODUCTS = [
   },
   {
     slug: "leather-shorts",
-    name: "Leather Shorts",
+    name: "HEX",
     category: "Shorts",
     type: "inquiry",
     priceLabel: "₦15,000",
@@ -98,20 +98,6 @@ const PRODUCTS = [
     ]
   },
   {
-    slug: "leather-backpack",
-    name: "Leather Backpack",
-    category: "Bags",
-    type: "inquiry",
-    priceLabel: "Price on request",
-    sizes: [],
-    description:
-      "Studded leather backpack with a flap closure, drawstring top, and a zip front pocket. Pricing and availability to be confirmed.",
-    images: [
-      "/assets/images/products/leather-backpack/real-2.jpg",
-      "/assets/images/products/leather-backpack/real-1.png"
-    ]
-  },
-  {
     slug: "freedom-and-rebellion",
     name: "Freedom & Rebellion Collection",
     category: "Freedom & Rebellion",
@@ -120,7 +106,7 @@ const PRODUCTS = [
     priceLabel: "Browse the collection",
     sizes: [],
     description:
-      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, and the mini skirt.",
+      "A capsule of studded leather, lace-up hardware, and grommet detail — jackets, pants, the mini skirt, and the bag.",
     images: [
       "/assets/images/products/freedom-and-rebellion/cover.jpg",
       "/assets/images/products/freedom-and-rebellion/jacket-2.jpg",
@@ -160,6 +146,16 @@ const PRODUCTS = [
           "/assets/images/products/custom-leather-mini-skirt/real-1.jpg",
           "/assets/images/products/custom-leather-mini-skirt/real-2.jpg",
           "/assets/images/products/custom-leather-mini-skirt/real-3.jpg"
+        ]
+      },
+      {
+        name: "Leather Backpack",
+        priceLabel: "Price on request",
+        description:
+          "Studded leather backpack with a flap closure, drawstring top, and a zip front pocket.",
+        images: [
+          "/assets/images/products/leather-backpack/real-2.jpg",
+          "/assets/images/products/leather-backpack/real-1.png"
         ]
       }
     ]
