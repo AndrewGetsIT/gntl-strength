@@ -22,12 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.title = `${collection.name} — GNTL STRENGTH`;
 
-  const leadGallery = collection.images
-    .map(
-      (src, i) =>
-        `<img src="${src}" alt="${collection.name} view ${i + 1}" loading="${i === 0 ? "eager" : "lazy"}">`
-    )
-    .join("");
+  const leadImage = `<img class="collection-lead-image" src="${collection.images[0]}" alt="${collection.name}" loading="eager">`;
 
   const items = collection.items || [];
 
@@ -58,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <p class="eyebrow">Collection</p>
     <h1 class="mb-lg">${collection.name}</h1>
     <p class="max-prose mb-lg">${collection.description}</p>
-    <div class="collection-lead-gallery">${leadGallery}</div>
+    ${leadImage}
     <div class="collection-items">${itemsMarkup}</div>`;
 
   root.querySelectorAll("[data-item-interested]").forEach((btn) => {

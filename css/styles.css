@@ -485,28 +485,12 @@ p {
 }
 
 /* Collection detail page (e.g. Freedom & Rebellion) */
-.collection-lead-gallery {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  margin-bottom: 24px;
-  scroll-snap-type: x mandatory;
-}
-
-.collection-lead-gallery img {
-  flex: 0 0 auto;
+.collection-lead-image {
   width: 100%;
   height: auto;
   border-radius: var(--radius);
-  scroll-snap-align: start;
+  margin-bottom: 24px;
   background: var(--bg-dark);
-}
-
-@media (min-width: 700px) {
-  .collection-lead-gallery img {
-    width: 320px;
-  }
 }
 
 .collection-item {
