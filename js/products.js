@@ -11,10 +11,10 @@ const PRODUCTS = [
     description:
       "Reflective and leather strap sets for boots, sold in pairs. A small detail that changes how a worn pair reads. Fits most lace-up work and combat boots.",
     images: [
+      "/assets/images/products/boot-stripes/real-4.jpg",
       "/assets/images/products/boot-stripes/real-1.jpg",
       "/assets/images/products/boot-stripes/real-2.jpg",
-      "/assets/images/products/boot-stripes/real-3.jpg",
-      "/assets/images/products/boot-stripes/real-4.jpg"
+      "/assets/images/products/boot-stripes/real-3.jpg"
     ]
   },
   {
@@ -93,10 +93,10 @@ const PRODUCTS = [
     description:
       "Black faux leather shorts with lace-up grommet detail and tab closures at the waist. Pricing and availability to be confirmed.",
     images: [
+      "/assets/images/products/leather-shorts/real-4.jpg",
       "/assets/images/products/leather-shorts/real-1.jpg",
       "/assets/images/products/leather-shorts/real-2.jpg",
-      "/assets/images/products/leather-shorts/real-3.jpg",
-      "/assets/images/products/leather-shorts/real-4.jpg"
+      "/assets/images/products/leather-shorts/real-3.jpg"
     ]
   },
   {
