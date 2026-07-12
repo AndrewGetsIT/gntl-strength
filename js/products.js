@@ -39,7 +39,8 @@ const PRODUCTS = [
       "/assets/images/products/custom-pant/real-3.jpg",
       "/assets/images/products/custom-pant/real-4.jpg",
       "/assets/images/products/custom-pant/real-5.jpg",
-      "/assets/images/products/custom-pant/real-6.jpg"
+      "/assets/images/products/custom-pant/real-6.jpg",
+      "/assets/images/products/custom-pant/real-7.jpg"
     ]
   },
   {
