@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.title = `${collection.name} — GNTL STRENGTH`;
 
-  const leadImage = `<img class="collection-lead-image" src="${collection.images[0]}" alt="${collection.name}" loading="eager">`;
+  const leadImage = `<img class="collection-lead-image" src="${collection.images[0]}" alt="${collection.name}" loading="eager" data-reveal>`;
 
   const items = collection.items || [];
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         )
         .join("");
       return `
-      <div class="collection-item">
+      <div class="collection-item" data-reveal data-reveal-stagger>
         <div class="collection-item-gallery">${gallery}</div>
         <div class="collection-item-info">
           <h3>${item.name}</h3>
@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <p class="max-prose mb-lg">${collection.description}</p>
     ${leadImage}
     <div class="collection-items">${itemsMarkup}</div>`;
+
+  if (window.initScrollReveal) window.initScrollReveal(root);
 
   root.querySelectorAll("[data-item-interested]").forEach((btn) => {
     btn.addEventListener("click", () => {

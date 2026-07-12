@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </button>`;
 
   root.innerHTML = `
-    <div class="pdp-gallery">${gallery}</div>
-    <div class="pdp-info">
+    <div class="pdp-gallery" data-reveal>${gallery}</div>
+    <div class="pdp-info" data-reveal>
       <p class="pdp-category">${product.category}</p>
       <h1>${product.name}</h1>
       <p class="pdp-price">${product.priceLabel}</p>
@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ${orderMarkup}
       ${product.sizeGuideLink || (product.type === "stock" && product.sizes.length) ? `<a class="pdp-size-link" href="/size-guide.html">Size guide</a>` : ""}
     </div>`;
+
+  if (window.initScrollReveal) window.initScrollReveal(root);
 
   let selectedSize = product.sizes && product.sizes[0];
 

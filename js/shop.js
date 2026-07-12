@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.innerHTML = items
       .map(
         (p) => `
-      <a class="product-card" href="/product.html?slug=${p.slug}">
+      <a class="product-card" href="/product.html?slug=${p.slug}" data-reveal data-reveal-stagger>
         <div class="product-card-image">
           <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
         </div>
@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </a>`
       )
       .join("");
+
+    if (window.initScrollReveal) window.initScrollReveal(grid);
   }
 
   filterBar.addEventListener("click", (e) => {
