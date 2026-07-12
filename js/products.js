@@ -162,6 +162,16 @@ const PRODUCTS = [
           "/assets/images/products/leather-backpack/real-2.jpg",
           "/assets/images/products/leather-backpack/real-1.png"
         ]
+      },
+      {
+        name: "Lace-Up Collar Sweater",
+        priceLabel: "Price on request",
+        description:
+          "Heather knit top with a leather lace-up bib collar and grommet detail.",
+        images: [
+          "/assets/images/products/freedom-and-rebellion/lace-collar-sweater-1.jpg",
+          "/assets/images/products/freedom-and-rebellion/lace-collar-sweater-2.jpg"
+        ]
       }
     ]
   }
