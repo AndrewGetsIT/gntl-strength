@@ -122,7 +122,9 @@ const PRODUCTS = [
           "Studded leather jacket with a snap-button closure and buckle straps. Style and finish vary piece to piece.",
         images: [
           "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg",
-          "/assets/images/products/freedom-and-rebellion/jacket-4.jpg"
+          "/assets/images/products/freedom-and-rebellion/jacket-4.jpg",
+          "/assets/images/products/freedom-and-rebellion/buckle-jacket-2.jpg",
+          "/assets/images/products/freedom-and-rebellion/buckle-jacket-3.jpg"
         ]
       },
       {
