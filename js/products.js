@@ -125,7 +125,8 @@ const PRODUCTS = [
           "/assets/images/products/freedom-and-rebellion/buckle-jacket-1.jpg",
           "/assets/images/products/freedom-and-rebellion/jacket-4.jpg",
           "/assets/images/products/freedom-and-rebellion/buckle-jacket-2.jpg",
-          "/assets/images/products/freedom-and-rebellion/buckle-jacket-3.jpg"
+          "/assets/images/products/freedom-and-rebellion/buckle-jacket-3.jpg",
+          "/assets/images/products/freedom-and-rebellion/cargo-jacket-set-1.jpg"
         ]
       },
       {
@@ -140,7 +141,10 @@ const PRODUCTS = [
         priceLabel: "Price on request",
         description:
           "Cargo-style pants with a buckled leg strap and chain accent.",
-        images: ["/assets/images/products/freedom-and-rebellion/pants-2.jpg"]
+        images: [
+          "/assets/images/products/freedom-and-rebellion/pants-2.jpg",
+          "/assets/images/products/freedom-and-rebellion/cargo-jacket-set-1.jpg"
+        ]
       },
       {
         name: "Custom Leather Mini Skirt",
