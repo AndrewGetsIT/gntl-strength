@@ -164,7 +164,7 @@ const PRODUCTS = [
         ]
       },
       {
-        name: "Lace-Up Collar Sweater",
+        name: "Lace Up Body Hug Sweater",
         priceLabel: "Price on request",
         description:
           "Heather knit top with a leather lace-up bib collar and grommet detail.",
