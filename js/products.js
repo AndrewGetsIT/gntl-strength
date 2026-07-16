@@ -6,7 +6,7 @@ const PRODUCTS = [
     name: "Boot Straps",
     category: "Boot Straps",
     type: "stock",
-    priceLabel: "₦30,000",
+    priceLabel: "₦50,000",
     sizes: [],
     description:
       "Reflective and leather strap sets for boots, sold in pairs. A small detail that changes how a worn pair reads. Fits most lace-up work and combat boots.",
