@@ -14,7 +14,11 @@ const PRODUCTS = [
       "/assets/images/products/boot-stripes/real-4.jpg",
       "/assets/images/products/boot-stripes/real-1.jpg",
       "/assets/images/products/boot-stripes/real-2.jpg",
-      "/assets/images/products/boot-stripes/real-3.jpg"
+      "/assets/images/products/boot-stripes/real-3.jpg",
+      "/assets/images/products/boot-stripes/real-5.jpg",
+      "/assets/images/products/boot-stripes/real-6.jpg",
+      "/assets/images/products/boot-stripes/real-7.jpg",
+      "/assets/images/products/boot-stripes/real-8.jpg"
     ]
   },
   {
